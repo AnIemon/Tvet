@@ -102,6 +102,9 @@
     <Compile Include="Assets\~Asteriods\Scripts\AsteriodsSpawn.cs" />
     <Compile Include="Assets\~Asteriods\Scripts\Movement.cs" />
     <Compile Include="Assets\~Asteriods\Scripts\Shooting.cs" />
+    <Compile Include="Assets\~Breakout\Scripts\Ball.cs" />
+    <Compile Include="Assets\~Breakout\Scripts\Helpers\KeepWithinScreen.cs" />
+    <Compile Include="Assets\~Breakout\Scripts\Paddle.cs" />
     <Compile Include="Assets\~GoneHome\Scripts\LoadGames.cs" />
     <Compile Include="Assets\~GoneHome\Scripts\Player.cs" />
     <Compile Include="Assets\~GoneHome\Scripts\PlayerMovement.cs" />
