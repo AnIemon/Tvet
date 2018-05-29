@@ -48,6 +48,11 @@ namespace Minesweeper
                 {
                     int desiredx = tile.x + x;
                     int desiredY = tile.y + y;
+                    if (desiredx < 0 || desiredx >= width ||
+                        desiredY < 0 || desiredY >= height)
+                    {
+                        continue;
+                    }
                     Tile currentTile = tiles[desiredx, desiredY];
                     if (currentTile.isMine)
                     {
@@ -56,6 +61,44 @@ namespace Minesweeper
                 }
             }
             return count;
+        }
+        void FFuncover(int x, int y, bool[,] visited)
+        {
+            if (x >= 0 && y >= 0 &&
+               x < width && y < height)
+            {
+                if (visited[x, y])
+                    return;
+                Tile tile = tiles[x, y];
+                int adjacentMines = GetAdjacentMinecount(tile);
+                tile.Reveal(adjacentMines);
+                if (adjacentMines == 0)
+                {
+                    visited[x, y] = true;
+                    FFuncover(x - 1, y, visited);
+                    FFuncover(x + 1, y, visited);
+                    FFuncover(x, y - 1, visited);
+                }
+            }
+        }
+        void UncoverMines(int mineState = 0)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                for (int y = 0; y < height; y++)
+                {
+                    Tile tile = tiles[x, y];
+                    if (tile.isMine)
+                    {
+                        int adjacentMines = GetAdjacentMinecount(tile);
+                        tile.Reveal(adjacentMines, mineState);
+                    }
+                }
+            }
+        }
+        bool NoMoreEmptyTiles()
+        {
+
         }
     }
 }
