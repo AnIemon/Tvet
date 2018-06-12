@@ -101,6 +101,9 @@
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileObject.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledMap.cs" />
     <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TmxObject.cs" />
+    <Compile Include="Assets\~Assessments\No.1 Assessment (Scripting in Unity)\Scripts\Destory.cs" />
+    <Compile Include="Assets\~Assessments\No.1 Assessment (Scripting in Unity)\Scripts\EnemySpawn.cs" />
+    <Compile Include="Assets\~Assessments\No.1 Assessment (Scripting in Unity)\Scripts\MovementScripts.cs" />
     <Compile Include="Assets\~Asteriods\Scripts\AsteriodsSpawn.cs" />
     <Compile Include="Assets\~Asteriods\Scripts\Movement.cs" />
     <Compile Include="Assets\~Asteriods\Scripts\Shooting.cs" />

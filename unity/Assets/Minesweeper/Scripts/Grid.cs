@@ -96,9 +96,6 @@ namespace Minesweeper
                 }
             }
         }
-        bool NoMoreEmptyTiles()
-        {
 
-        }
     }
 }
