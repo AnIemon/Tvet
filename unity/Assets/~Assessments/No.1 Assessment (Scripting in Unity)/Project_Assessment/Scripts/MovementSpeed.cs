@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovementScripts : MonoBehaviour
+public class MovementSpeed : MonoBehaviour
 {
     public float speed;
 
@@ -15,6 +15,7 @@ public class MovementScripts : MonoBehaviour
 
     void FixedUpdate()
     {
+        //movement of player
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -22,4 +23,6 @@ public class MovementScripts : MonoBehaviour
 
         rb.AddForce(movement * speed);
     }
+
 }
+
